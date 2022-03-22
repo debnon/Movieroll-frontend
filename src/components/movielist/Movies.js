@@ -26,7 +26,7 @@ const MovieProfiles = () => {
         //     setMovieProfiles(res.data);
         // });
 
-        axios.get("http://localhost:8080/api/v1/movie/curated", {
+        axios.get("http://www.movieroll.co.uk/api/v1/movie/curated", {
             headers: {
                 Authorization: 'Bearer ' + retrieveToken
               }
