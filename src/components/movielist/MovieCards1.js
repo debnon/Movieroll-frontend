@@ -27,11 +27,11 @@ const MovieCards1 = () => {
         var weburl = "https://image.tmdb.org/t/p/original/".concat(movieProfile.poster);
         return (
             <>
-            <div class="card"><img src={weburl} class="poster" />
-            <div class="title">
+            <div className="card"><img src={weburl} className="poster" />
+            <div className="title">
             {movieProfile.title}
             </div>
-            <div class="release">
+            <div className="release">
             {movieProfile.releaseDate}
             </div>
             </div>

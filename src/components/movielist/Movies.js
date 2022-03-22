@@ -48,7 +48,7 @@ const MovieProfiles = () => {
     return movieProfiles.map((movieProfile, index) => {
         var weburl = "https://image.tmdb.org/t/p/original/".concat(movieProfile.poster);
         return (
-            <div class="card"><img src={weburl} class="poster" /></div>
+            <div className="card"><img src={weburl} className="poster" /></div>
         )
     })
     
@@ -57,13 +57,13 @@ const MovieProfiles = () => {
 export default function Movielist() {
     return(
         <>
-        <form class="example">
+        <form className="example">
   <input type="text" placeholder="Search.." name="search"/>
-  <button type="submit"><i class="fa fa-search"></i></button>
+  <button type="submit"><i className="fa fa-search"></i></button>
 </form>
         <section>
   <h2>Top rated movies</h2>
-  <div class="cards-wrapper">
+  <div className="cards-wrapper">
   {/* <MovieProfiles /> */}
   <MovieCards1 />
   </div>
@@ -71,13 +71,13 @@ export default function Movielist() {
 
 <section>
   <h2>User top picks</h2>
-  <div class="cards-wrapper">
+  <div className="cards-wrapper">
   {/* <MovieProfiles /> */}
   <MovieCards2 />
   </div>
 </section>
 <Footer />
-         {/* <div className="movielist">
+         {/* <div classNameName="movielist">
          <h1>Application</h1>
                  <MovieProfiles />
              </div> */}

@@ -6,11 +6,11 @@ const Popup = () => {
     console.log("yo"); 
     function showPopup() {
         console.log("yo");  
-         popup.classList.add('open');
+         popup.classNameList.add('open');
     }
     function hidePopup() {
         console.log("no");    
-        popup.classList.remove('open');
+        popup.classNameList.remove('open');
     }
 
     
@@ -19,9 +19,9 @@ const Popup = () => {
         <button onClick={showPopup}>
         Open Popup
       </button>
-      <div class="popup">
-        <div class="blocker" onClick={hidePopup}></div>
-        <div class="contents">
+      <div className="popup">
+        <div className="blocker" onClick={hidePopup}></div>
+        <div className="contents">
           This is popup
         </div>
       </div>

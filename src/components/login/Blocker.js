@@ -6,7 +6,7 @@ const Blocker = ({ isShowRegister }) => {
     console.log(isShowRegister);
     return (
     <div className={`${isShowRegister ? "active" : ""} show`}>
-    <div class="blocker"> </div>
+    <div className="blocker"> </div>
     </div>
     )
 }
