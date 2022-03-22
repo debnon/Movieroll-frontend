@@ -12,7 +12,7 @@ const UserProfiles = () => {
     const retrieveToken = JSON.parse(localStorage.getItem("token"))["jwt-token"];
     const fetchUserProfiles =  () => {
 
-    axios.get("http://www.movieroll.co.uk/api/v1/admin/user", {
+    axios.get("http://api.movieroll.co.uk/api/v1/admin/user", {
                 headers: {
                     Authorization: 'Bearer ' + retrieveToken
                   }
