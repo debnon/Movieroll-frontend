@@ -104,14 +104,14 @@ const Register = ({ isShowRegister, setrUserName, setrPassword, setFirstname,
                 <div class="select_arrow"></div>
                 
               </div>
-            <div class="input_field checkbox_option">
+            {/* <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1"/>
     			<label for="cb1">I agree with terms and conditions</label>
             </div>
             <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb2"/>
     			<label for="cb2">I want to receive the newsletter</label>
-            </div>
+            </div> */}
           <input class="button" type="submit" value="Register" onClick={handleRegistration}/>
         </form>
       </div>
