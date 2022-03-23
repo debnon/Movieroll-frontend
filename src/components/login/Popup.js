@@ -6,11 +6,11 @@ const Popup = () => {
     console.log("yo"); 
     function showPopup() {
         console.log("yo");  
-         popup.classNameList.add('open');
+         popup.classList.add('open');
     }
     function hidePopup() {
         console.log("no");    
-        popup.classNameList.remove('open');
+        popup.classList.remove('open');
     }
 
     
