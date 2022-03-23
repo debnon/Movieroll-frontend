@@ -41,78 +41,78 @@ const Register = ({ isShowRegister, setrUserName, setrPassword, setFirstname,
     // }
 
   return (
-    <div classNameName={`${isShowRegister ? "active" : ""} show`}>
+    <div class={`${isShowRegister ? "active" : ""} show`}>
         
-    <div className="form_wrapper">
-  <div className="form_container">
-    <div className="title_container">
+    <div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
       <h2>Sign up to movieroll now</h2>
     </div>
-    <div className="row clearfix">
-      <div className="">
+    <div class="row clearfix">
+      <div class="">
         <form>
 
         
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="email" placeholder="Email" required onChange={e => setEmail(e.target.value)}/>
           </div>
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="username" placeholder="Username" required onChange={e => setrUserName(e.target.value)}/>
           </div>
         
-        {/* <div className="col_half">
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
+        {/* <div class="col_half">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="username" placeholder="Username" required />
           </div>
         </div> */}
 
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-lock"></i></span>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
             <input type="password" name="password" placeholder="Password" required onChange={e => setrPassword(e.target.value)}/>
           </div>
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-lock"></i></span>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
             <input type="password" name="password" placeholder="Re-type Password" required />
           </div>
-          <div className="input_field"> <span><i aria-hidden="true" className="fa fa-envelope"></i></span>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
             <input type="email" name="ContactNumber" placeholder="Contact Number" required onChange={e => setContactnumber(e.target.value)}/>
           </div>
-          <div className="row clearfix">
-            <div className="col_half">
-              <div className="input_field"> <span><i aria-hidden="true" className="fa fa-user"></i></span>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
                 <input type="text" name="name" placeholder="First Name" onChange={e => setFirstname(e.target.value)}/>
               </div>
             </div>
-            <div className="col_half">
-              <div className="input_field"> <span><i aria-hidden="true" className="fa fa-user"></i></span>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
                 <input type="text" name="name" placeholder="Last Name" required onChange={e => setLastname(e.target.value)}/>
               </div>
               
             </div>
             
           </div>
-            	{/* <div className="input_field radio_option">
+            	{/* <div class="input_field radio_option">
               <input type="radio" name="radiogroup1" id="rd1"/>
               <label for="rd1">Male</label>
               <input type="radio" name="radiogroup1" id="rd2"/>
               <label for="rd2">Female</label>
               </div> */}
-              <div className="input_field select_option">
+              <div class="input_field select_option">
                 <select>
                   <option>Select a country</option>
                   <option>Option 1</option>
                   <option>Option 2</option>
                 </select>
-                <div className="select_arrow"></div>
+                <div class="select_arrow"></div>
                 
               </div>
-            <div className="input_field checkbox_option">
+            <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1"/>
     			<label for="cb1">I agree with terms and conditions</label>
             </div>
-            <div className="input_field checkbox_option">
+            <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb2"/>
     			<label for="cb2">I want to receive the newsletter</label>
             </div>
-          <input className="button" type="submit" value="Register" onClick={handleRegistration}/>
+          <input class="button" type="submit" value="Register" onClick={handleRegistration}/>
         </form>
       </div>
     </div>

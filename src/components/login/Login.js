@@ -94,34 +94,34 @@ export default function Login({ setToken }) {
     const popup = document.querySelector('.popup');
 
     const showPopup = () => {
-         popup.classNameList.add('open');
+         popup.classList.add('open');
     }
     const hidePopup = () => {   
-        popup.classNameList.remove('open');
+        popup.classList.remove('open');
     }
 
     return (
-    <div className="h0">
-        <div className="h1">
+    <div class="h0">
+        <div class="h1">
             <img src={logo} alt="M logo" />
-            {/* <h1 className="h">movieroll</h1> */}
-            <p className="pr">Movieroll helps you find the movies you were always looking for</p>
+            {/* <h1 class="h">movieroll</h1> */}
+            <p class="pr">Movieroll helps you find the movies you were always looking for</p>
         </div>  
-        <form className="main" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Email address or phone number" className="txt" onChange={e => setUserName(e.target.value)}/><br/>
-            <input type="password" placeholder="Password" className="txt" onChange={e => setPassword(e.target.value)}/><br/>
-            <input type="submit" value="Log In" className="login-btn"/><br/>
-            <div className="a-link">
-            <a href="" className="link">Forgotten Password?</a>
+        <form class="main" onSubmit={handleSubmit}>
+            <input type="text" placeholder="Email address or phone number" class="txt" onChange={e => setUserName(e.target.value)}/><br/>
+            <input type="password" placeholder="Password" class="txt" onChange={e => setPassword(e.target.value)}/><br/>
+            <input type="submit" value="Log In" class="login-btn"/><br/>
+            <div class="a-link">
+            <a href="" class="link">Forgotten Password?</a>
             </div>
             
-            <div className="ca" onClick={showPopup}>
-                <a className="pca" >Create New Account</a>
+            <div class="ca" onClick={showPopup}>
+                <a class="pca" >Create New Account</a>
             </div>
         </form>
             
-      <div className="popup">
-        <div className="blocker" onClick={hidePopup}></div>
+      <div class="popup">
+        <div class="blocker" onClick={hidePopup}></div>
         <Register
         handleRegistration={handleRegistration}
         setrUserName={setrUserName}
@@ -131,7 +131,7 @@ export default function Login({ setToken }) {
         setEmail={setEmail}
         setContactnumber={setContactnumber}
         />
-        {/* <div classNameName={`${isShowRegister ? "active" : ""} show`}> */}
+        {/* <div className={`${isShowRegister ? "active" : ""} show`}> */}
         
         
       </div>
