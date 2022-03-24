@@ -28,7 +28,6 @@ async function loginUser(credentials) {
 }
 
 async function registerUser(credentials) {
-    console.log("yo");
     return fetch('http://api.movieroll.co.uk/api/v1/user/registration', {
         method: 'POST',
         headers: {
@@ -47,7 +46,6 @@ export default function Login({ setToken }) {
     const [password, setPassword] = useState();
 
     const handleSubmit = async e => {
-        console.log("yo");
         e.preventDefault();
         const token = await loginUser({
             "emailID": username,
@@ -72,7 +70,6 @@ export default function Login({ setToken }) {
     const [contactnumber, setContactnumber] = useState();
    
     const handleRegistration = async e => {
-        console.log("yo");
         e.preventDefault();
         const token = await registerUser({
             "id": "25",
@@ -84,27 +81,36 @@ export default function Login({ setToken }) {
             "contactnumber": contactnumber
         });
         setTimeout(function(){
-            hidePopup();
+            signInButton();
         }, 1000);
         
         
     }
 
     // handle popup 
-    const popup = document.querySelector('.popup');
+    // const popup = document.querySelector('.popup');
 
-    const showPopup = () => {
-         popup.classList.add('open');
-    }
-    const hidePopup = () => {   
-        popup.classList.remove('open');
-    }
+    // const showPopup = () => {
+    //     popup.classList.add('open');
+    // }
+    // const hidePopup = () => {   
+    //     popup.classList.remove('open');
+    // }
+
+    const [isPopupActive, setIsPopupActive] = React.useState(false);
+    const signInButton = () => {
+        setIsPopupActive(false);
+    };  
+    const signUpButton = () => {
+        setIsPopupActive(true);
+    };
 
     return (
+
     <div className="h0">
         <div className="h1">
             <img src={logo} alt="M logo" />
-            {/* <h1 className="h">movieroll</h1> */}
+
             <p className="pr">Movieroll helps you find the movies you were always looking for</p>
         </div>  
         <form className="main" onSubmit={handleSubmit}>
@@ -115,13 +121,13 @@ export default function Login({ setToken }) {
             <a href="" className="link">Forgotten Password?</a>
             </div>
             
-            <div className="ca" onClick={showPopup}>
+            <div className="ca" onClick={signUpButton}>
                 <a className="pca" >Create New Account</a>
             </div>
         </form>
             
-      <div className="popup">
-        <div className="blocker" onClick={hidePopup}></div>
+      <div className={`popup${isPopupActive ? " open" : ""}`}>
+        <div className="blocker" onClick={signInButton}></div>
         <Register
         handleRegistration={handleRegistration}
         setrUserName={setrUserName}
@@ -138,6 +144,7 @@ export default function Login({ setToken }) {
       
             
      </div>
+
     )
 }
 
