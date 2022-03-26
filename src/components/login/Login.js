@@ -17,7 +17,7 @@ import './Login.css';
 
 // http://www.movieroll.co.uk/api/v1/user/authenticate
 async function loginUser(credentials) {
-    return fetch('http://api.movieroll.co.uk/api/v1/user/authenticate', {
+    return fetch('https://api.movieroll.co.uk/api/v1/user/authenticate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ async function loginUser(credentials) {
 }
 
 async function registerUser(credentials) {
-    return fetch('http://api.movieroll.co.uk/api/v1/user/registration', {
+    return fetch('https://api.movieroll.co.uk/api/v1/user/registration', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
